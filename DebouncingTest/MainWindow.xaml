@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="Click Me" Command="{Binding Button1Command}"></Button>
+        <Button Grid.Row="0" Grid.Column="1" Content="Or Me" Command="{Binding Button1Command}"></Button>
+        <Label Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Content="{Binding CommandsSent}"></Label>
     </Grid>
 </Window>
